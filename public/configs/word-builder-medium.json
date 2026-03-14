@@ -1,0 +1,17 @@
+{
+  "gameId": "word-builder-medium",
+  "type": "word",
+  "title": "Word Builder",
+  "difficulty": "medium",
+  "timer": { "mode": "countdown", "seconds": 180 },
+  "scoring": {
+    "base": 500,
+    "timePenalty": 1,
+    "errorPenalty": 25
+  },
+  "config": {
+    "letters": ["A","P","L","E","T","R"],
+    "minLength": 3,
+    "targetWords": ["PLATE","PETAL","LATER","ALERT","ALTER","LEAP","TALE","TAPE","TRAP","REAP"]
+  }
+}
