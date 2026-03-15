@@ -63,6 +63,36 @@ export const sudokuLogic: GameDefinition = {
                meta: { ...state.meta, errors: countErrors(newBoard) } }
     }
 
+    if (action.type === "USE_HINT") {
+      const solution = action.config?.config.solution as number[][]
+      if (!solution) return state
+
+      // Find all empty cells (value 0)
+      const emptyCells: [number, number][] = []
+      board.forEach((row, ri) => {
+        row.forEach((cell, ci) => {
+          if (cell === 0) emptyCells.push([ri, ci])
+        })
+      })
+
+      if (emptyCells.length === 0) return state
+
+      // Pick the first empty cell for simplicity (or we could pick random)
+      const [r, c] = emptyCells[0]
+      const hintValue = solution[r][c]
+      
+      const newBoard = board.map((row, ri) =>
+        row.map((cell, ci) => (ri === r && ci === c ? hintValue : cell))
+      )
+
+      return {
+        ...state,
+        board: newBoard,
+        moves: [...state.moves, action],
+        meta: { ...state.meta, hints: (state.meta.hints || 0) + 1, errors: countErrors(newBoard) }
+      }
+    }
+
     return state
   },
 

@@ -39,6 +39,20 @@ export const wordBuilderLogic: GameDefinition = {
                meta: { ...state.meta, errors: state.meta.errors + 1 },
                moves: [...state.moves, action] }
     }
+
+    if (action.type === "USE_HINT") {
+      const unfound = board.targetWords.filter((w: string) => !board.found.includes(w))
+      if (unfound.length === 0) return state
+
+      const hintWord = unfound[0]
+      return {
+        ...state,
+        board: { ...board, found: [...board.found, hintWord], current: [] },
+        meta: { ...state.meta, hints: (state.meta.hints || 0) + 1 },
+        moves: [...state.moves, action]
+      }
+    }
+
     return state
   },
 

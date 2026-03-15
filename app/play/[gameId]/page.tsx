@@ -128,7 +128,7 @@ export default function PlayPage() {
         <SessionSidebar
           gameId={gameId}
           hintCost={config.scoring.hintPenalty??100}
-          onHint={() => dispatch({type:"USE_HINT"})}
+          onHint={() => dispatch({type:"USE_HINT", config})}
         />
       </div>
     </div>
