@@ -1,0 +1,63 @@
+// components/play/SudokuBoard.tsx
+// NEW FILE (Extracted from games/sudoku/Sudoku.tsx)
+"use client"
+import { useGameStore }    from "@/stores/gameStore"
+import { useSessionStore } from "@/stores/sessionStore"
+
+interface Props {
+  prefilled:     number[][]
+  config:        any
+  selectedCell:  [number,number] | null
+  onCellSelect: (cell: [number,number] | null) => void
+}
+
+export default function SudokuBoard({ prefilled, config, selectedCell, onCellSelect }: Props) {
+  const { state, dispatch } = useGameStore()
+  const { status }          = useSessionStore()
+
+  if (!state) return null
+
+  const board        = state.board as number[][]
+  const prefilledSet = new Set(prefilled.map(([r,c]) => `${r}-${c}`))
+
+  const handleCell = (r: number, c: number) => {
+    if (status !== "playing" || prefilledSet.has(`${r}-${c}`)) return
+    onCellSelect([r, c])
+  }
+
+  const handleNum = (n: number) => {
+    if (selectedCell) dispatch({ type: "PLACE_NUMBER", row: selectedCell[0], col: selectedCell[1], value: n })
+  }
+
+  return (
+    <div className="flex flex-col items-center gap-5">
+      <div className="border-2 border-gray-700 inline-grid grid-cols-9">
+        {board.map((row, r) => row.map((cell, c) => {
+          const isPre  = prefilledSet.has(`${r}-${c}`)
+          const isSel  = selectedCell?.[0] === r && selectedCell?.[1] === c
+          const bR = (c+1)%3===0&&c!==8 ? "border-r-2 border-r-gray-700" : "border-r border-r-gray-200"
+          const bB = (r+1)%3===0&&r!==8 ? "border-b-2 border-b-gray-700" : "border-b border-b-gray-200"
+          return (
+            <div key={`${r}-${c}`} onClick={() => handleCell(r, c)}
+              className={`w-9 h-9 flex items-center justify-center text-sm font-medium select-none
+                ${bR} ${bB}
+                ${isSel ? "bg-indigo-100" : ""}
+                ${isPre ? "text-gray-500 cursor-default" : "text-indigo-600 cursor-pointer hover:bg-indigo-50"}`}>
+              {cell !== 0 ? cell : ""}
+            </div>
+          )
+        }))}
+      </div>
+      <div className="grid grid-cols-5 gap-2">
+        {[1,2,3,4,5,6,7,8,9].map(n => (
+          <button key={n} onClick={() => handleNum(n)}
+            className="w-10 h-10 rounded-lg border border-gray-300 text-sm font-semibold text-gray-700 hover:bg-gray-100 transition-colors">
+            {n}
+          </button>
+        ))}
+        <button onClick={() => { if(selectedCell) dispatch({type:"ERASE",row:selectedCell[0],col:selectedCell[1]}) }}
+          className="w-10 h-10 rounded-lg border border-gray-300 text-xs text-gray-500 hover:bg-gray-100 transition-colors">✕</button>
+      </div>
+    </div>
+  )
+}

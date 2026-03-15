@@ -1,5 +1,5 @@
 # Reusability Design Plan
-### TapTap Game Engine — TapTap Hackathon 2026 · League 1
+### Kratos Engine — Kratos Hackathon 2026 · League 1
 
 ---
 

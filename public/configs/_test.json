@@ -1,5 +1,5 @@
 {
-    "_info": "TapTap Engine — Test Suite v1.0",
+    "_info": "Kratos Engine — Test Suite v1.0",
     "_usage": "Drop individual game objects into /public/configs/ as separate .json files",
     "TEST_FILES": {
         "sudoku-easy.json": {

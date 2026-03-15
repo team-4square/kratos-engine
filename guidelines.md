@@ -1,4 +1,4 @@
-# TapTap Game Engine — Development Guidelines
+# Kratos Engine — Development Guidelines
 > AI Editor Instructions: Read all rules before generating any code. Apply rules to every file written.
 
 ---

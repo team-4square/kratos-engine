@@ -1,6 +1,8 @@
 {
   "gameId": "sudoku-easy",
-  "type": "grid",
+  "type": "sudoku",
+  "renderer": "grid",
+  "category": "logic",
   "title": "Sudoku Easy",
   "difficulty": "easy",
   "timer": { "mode": "countdown", "seconds": 300 },

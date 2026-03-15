@@ -1,17 +1,20 @@
 {
   "gameId": "word-builder-medium",
-  "type": "word",
+  "type": "wordBuilder",
+  "renderer": "word",
+  "category": "word",
   "title": "Word Builder",
   "difficulty": "medium",
-  "timer": { "mode": "countdown", "seconds": 180 },
+  "timer": { "mode": "countup", "seconds": 180 },
   "scoring": {
     "base": 500,
     "timePenalty": 1,
-    "errorPenalty": 25
+    "errorPenalty": 10,
+    "hintPenalty": 50
   },
   "config": {
-    "letters": ["A","P","L","E","T","R"],
     "minLength": 3,
-    "targetWords": ["PLATE","PETAL","LATER","ALERT","ALTER","LEAP","TALE","TAPE","TRAP","REAP"]
+    "letters": ["S", "T", "A", "R", "P", "I", "L", "E"],
+    "targetWords": ["STAR", "STAIR", "STARE", "STEP", "PILE", "PIER", "PART", "PARE", "REAL", "RAIL", "SALE", "SALT", "TAIL", "TEAR", "TRAP", "TRIP"]
   }
 }

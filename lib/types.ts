@@ -1,6 +1,8 @@
 export interface JSONConfig {
   gameId:      string
   type:        string
+  renderer:    string
+  category:    string
   title:       string
   difficulty?: "easy" | "medium" | "hard"
   timer: {
