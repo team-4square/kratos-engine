@@ -1,5 +1,4 @@
 # Engine Architecture Diagram
-### Kratos Engine — Kratos Hackathon 2026 · League 1
 
 ---
 
