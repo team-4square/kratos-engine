@@ -8,7 +8,7 @@
   "timer": { "mode": "countdown", "seconds": 300 },
   "scoring": {
     "base": 1000,
-    "timePenalty": 2,
+    "timePenalty": 1,
     "errorPenalty": 50,
     "hintPenalty": 100
   },

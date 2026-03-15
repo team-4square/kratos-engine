@@ -23,11 +23,15 @@ export const useSessionStore = create<SessionStore>((set, get) => ({
   intervalId:  null,
 
   startSession: (seconds) => {
+    const { intervalId } = get()
+    if (intervalId) clearInterval(intervalId)
+    
     const id = setInterval(() => {
       const { timer } = get()
       if (timer <= 1) {
-        clearInterval(get().intervalId!)
-        set({ timer: 0, status: "complete" })
+        const currentId = get().intervalId
+        if (currentId) clearInterval(currentId)
+        set({ timer: 0, status: "complete", intervalId: null })
       } else {
         set(s => ({ timer: s.timer - 1, timeElapsed: s.timeElapsed + 1 }))
       }
