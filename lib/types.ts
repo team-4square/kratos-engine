@@ -1,5 +1,3 @@
-// lib/types.ts
-
 export interface JSONConfig {
   gameId:      string
   type:        string

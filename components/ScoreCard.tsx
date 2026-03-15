@@ -1,4 +1,3 @@
-// components/ScoreCard.tsx
 "use client"
 import { useSessionStore } from "@/stores/sessionStore"
 import { useGameStore }    from "@/stores/gameStore"

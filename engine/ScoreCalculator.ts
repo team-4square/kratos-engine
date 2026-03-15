@@ -1,4 +1,3 @@
-// engine/ScoreCalculator.ts
 import { JSONConfig, GameState } from "@/lib/types"
 
 export function calculateScore(

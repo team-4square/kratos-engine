@@ -1,16 +1,15 @@
-// app/page.tsx
 import Link from "next/link"
 
 const GAMES = [
-  { id: "sudoku-easy", title: "Sudoku Easy", type: "Grid", difficulty: "Easy", maxScore: 1000 },
-  { id: "word-builder-medium", title: "Word Builder", type: "Word", difficulty: "Medium", maxScore: 500 },
+  { id: "sudoku-easy",         title: "Sudoku Easy",  type: "Grid", difficulty: "Easy",   maxScore: 1000 },
+  { id: "word-builder-medium", title: "Word Builder", type: "Word", difficulty: "Medium", maxScore: 500  },
 ]
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-indigo-700 mb-1">Kratos Engine</h1>
+        <h1 className="text-3xl font-bold text-indigo-700 mb-1">TapTap Engine</h1>
         <p className="text-gray-500 text-sm mb-8">JSON-driven game engine · TapTap Hackathon 2026 · League 1</p>
         <div className="grid grid-cols-3 gap-4">
           {GAMES.map(g => (

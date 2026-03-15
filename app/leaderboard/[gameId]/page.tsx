@@ -1,4 +1,3 @@
-// app/leaderboard/[gameId]/page.tsx
 "use client"
 import { useParams, useRouter } from "next/navigation"
 import Leaderboard from "@/components/Leaderboard"

@@ -1,4 +1,3 @@
-// engine/GameRegistry.ts
 import { GameDefinition } from "@/lib/types"
 import { sudokuLogic }      from "@/games/sudoku/sudoku.logic"
 import { wordBuilderLogic } from "@/games/wordbuilder/wordbuilder.logic"

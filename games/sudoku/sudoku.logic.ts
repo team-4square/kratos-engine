@@ -1,4 +1,3 @@
-// games/sudoku/sudoku.logic.ts
 import { GameDefinition, JSONConfig, GameState, Action } from "@/lib/types"
 
 function buildBoard(gridSize: number, prefilled: number[][]): number[][] {

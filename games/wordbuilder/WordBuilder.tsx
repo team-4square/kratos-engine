@@ -1,12 +1,10 @@
-// games/wordbuilder/WordBuilder.tsx
 "use client"
 import { useGameStore }    from "@/stores/gameStore"
 import { useSessionStore } from "@/stores/sessionStore"
 
 export default function WordBuilder() {
-  const state    = useGameStore(s => s.state)
-  const dispatch = useGameStore(s => s.dispatch)
-  const status   = useSessionStore(s => s.status)
+  const { state, dispatch } = useGameStore()
+  const { status }          = useSessionStore()
 
   if (!state) return null
   const board       = state.board as any

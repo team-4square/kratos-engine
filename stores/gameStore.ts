@@ -1,4 +1,3 @@
-// stores/gameStore.ts
 "use client"
 import { create } from "zustand"
 import { GameState, Action, JSONConfig, GameDefinition } from "@/lib/types"

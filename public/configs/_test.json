@@ -1,0 +1,1150 @@
+{
+    "_info": "TapTap Engine — Test Suite v1.0",
+    "_usage": "Drop individual game objects into /public/configs/ as separate .json files",
+    "TEST_FILES": {
+        "sudoku-easy.json": {
+            "gameId": "sudoku-easy",
+            "type": "grid",
+            "title": "Sudoku Easy",
+            "difficulty": "easy",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 300
+            },
+            "scoring": {
+                "base": 1000,
+                "timePenalty": 2,
+                "errorPenalty": 50,
+                "hintPenalty": 100
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": [
+                    [
+                        0,
+                        0,
+                        5
+                    ],
+                    [
+                        0,
+                        1,
+                        3
+                    ],
+                    [
+                        0,
+                        4,
+                        7
+                    ],
+                    [
+                        1,
+                        0,
+                        6
+                    ],
+                    [
+                        1,
+                        3,
+                        1
+                    ],
+                    [
+                        1,
+                        4,
+                        9
+                    ],
+                    [
+                        1,
+                        5,
+                        5
+                    ],
+                    [
+                        2,
+                        1,
+                        9
+                    ],
+                    [
+                        2,
+                        2,
+                        8
+                    ],
+                    [
+                        3,
+                        0,
+                        8
+                    ],
+                    [
+                        3,
+                        4,
+                        6
+                    ],
+                    [
+                        3,
+                        8,
+                        3
+                    ],
+                    [
+                        4,
+                        0,
+                        4
+                    ],
+                    [
+                        4,
+                        3,
+                        8
+                    ],
+                    [
+                        4,
+                        5,
+                        3
+                    ],
+                    [
+                        4,
+                        8,
+                        1
+                    ],
+                    [
+                        5,
+                        0,
+                        7
+                    ],
+                    [
+                        5,
+                        4,
+                        2
+                    ],
+                    [
+                        5,
+                        8,
+                        6
+                    ],
+                    [
+                        6,
+                        1,
+                        6
+                    ],
+                    [
+                        6,
+                        6,
+                        2
+                    ],
+                    [
+                        6,
+                        7,
+                        8
+                    ],
+                    [
+                        7,
+                        3,
+                        4
+                    ],
+                    [
+                        7,
+                        4,
+                        1
+                    ],
+                    [
+                        7,
+                        5,
+                        9
+                    ],
+                    [
+                        7,
+                        8,
+                        5
+                    ],
+                    [
+                        8,
+                        4,
+                        8
+                    ],
+                    [
+                        8,
+                        7,
+                        7
+                    ],
+                    [
+                        8,
+                        8,
+                        9
+                    ]
+                ]
+            }
+        },
+        "sudoku-hard.json": {
+            "gameId": "sudoku-hard",
+            "type": "grid",
+            "title": "Sudoku Hard",
+            "difficulty": "hard",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 180
+            },
+            "scoring": {
+                "base": 2000,
+                "timePenalty": 5,
+                "errorPenalty": 100,
+                "hintPenalty": 200
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": [
+                    [
+                        0,
+                        0,
+                        8
+                    ],
+                    [
+                        0,
+                        5,
+                        2
+                    ],
+                    [
+                        0,
+                        7,
+                        6
+                    ],
+                    [
+                        1,
+                        1,
+                        3
+                    ],
+                    [
+                        1,
+                        6,
+                        5
+                    ],
+                    [
+                        2,
+                        2,
+                        7
+                    ],
+                    [
+                        2,
+                        4,
+                        4
+                    ],
+                    [
+                        3,
+                        3,
+                        5
+                    ],
+                    [
+                        3,
+                        8,
+                        4
+                    ],
+                    [
+                        4,
+                        1,
+                        8
+                    ],
+                    [
+                        4,
+                        4,
+                        3
+                    ],
+                    [
+                        4,
+                        7,
+                        7
+                    ],
+                    [
+                        5,
+                        0,
+                        4
+                    ],
+                    [
+                        5,
+                        5,
+                        9
+                    ],
+                    [
+                        6,
+                        4,
+                        8
+                    ],
+                    [
+                        6,
+                        6,
+                        3
+                    ],
+                    [
+                        7,
+                        2,
+                        9
+                    ],
+                    [
+                        7,
+                        7,
+                        4
+                    ],
+                    [
+                        8,
+                        1,
+                        6
+                    ],
+                    [
+                        8,
+                        3,
+                        7
+                    ],
+                    [
+                        8,
+                        8,
+                        1
+                    ]
+                ]
+            }
+        },
+        "word-builder-easy.json": {
+            "gameId": "word-builder-easy",
+            "type": "word",
+            "title": "Word Builder Easy",
+            "difficulty": "easy",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 240
+            },
+            "scoring": {
+                "base": 400,
+                "timePenalty": 1,
+                "errorPenalty": 10
+            },
+            "config": {
+                "letters": [
+                    "C",
+                    "A",
+                    "T",
+                    "S",
+                    "R"
+                ],
+                "minLength": 3,
+                "targetWords": [
+                    "CAT",
+                    "CAR",
+                    "RAT",
+                    "SAT",
+                    "STAR",
+                    "CATS",
+                    "RATS",
+                    "SCAR",
+                    "CART",
+                    "ARTS"
+                ]
+            }
+        },
+        "word-builder-medium.json": {
+            "gameId": "word-builder-medium",
+            "type": "word",
+            "title": "Word Builder Medium",
+            "difficulty": "medium",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 180
+            },
+            "scoring": {
+                "base": 500,
+                "timePenalty": 1,
+                "errorPenalty": 25
+            },
+            "config": {
+                "letters": [
+                    "A",
+                    "P",
+                    "L",
+                    "E",
+                    "T",
+                    "R"
+                ],
+                "minLength": 3,
+                "targetWords": [
+                    "PLATE",
+                    "PETAL",
+                    "LATER",
+                    "ALERT",
+                    "ALTER",
+                    "LEAP",
+                    "TALE",
+                    "TAPE",
+                    "TRAP",
+                    "REAP"
+                ]
+            }
+        },
+        "word-builder-hard.json": {
+            "gameId": "word-builder-hard",
+            "type": "word",
+            "title": "Word Builder Hard",
+            "difficulty": "hard",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 120
+            },
+            "scoring": {
+                "base": 800,
+                "timePenalty": 3,
+                "errorPenalty": 50
+            },
+            "config": {
+                "letters": [
+                    "S",
+                    "T",
+                    "R",
+                    "A",
+                    "I",
+                    "N",
+                    "G"
+                ],
+                "minLength": 4,
+                "targetWords": [
+                    "GRAINS",
+                    "STRAIN",
+                    "TRAINS",
+                    "GRANTS",
+                    "RATING",
+                    "STARING",
+                    "RANTING",
+                    "RASING",
+                    "GIANTS",
+                    "GNARLS"
+                ]
+            }
+        }
+    },
+    "EDGE_CASE_TESTS": {
+        "TEST_01_minimal_valid.json": {
+            "_test": "Minimum fields only — engine must boot without optional fields",
+            "gameId": "test-minimal",
+            "type": "grid",
+            "title": "Minimal Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 60
+            },
+            "scoring": {
+                "base": 100,
+                "timePenalty": 1
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": [
+                    [
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        1,
+                        2
+                    ],
+                    [
+                        0,
+                        2,
+                        3
+                    ]
+                ]
+            }
+        },
+        "TEST_02_short_timer.json": {
+            "_test": "Timer stress test — 10 second countdown, engine must auto-end session",
+            "gameId": "test-short-timer",
+            "type": "grid",
+            "title": "Speed Test",
+            "difficulty": "hard",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 10
+            },
+            "scoring": {
+                "base": 500,
+                "timePenalty": 10
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": [
+                    [
+                        0,
+                        0,
+                        5
+                    ],
+                    [
+                        0,
+                        1,
+                        3
+                    ]
+                ]
+            }
+        },
+        "TEST_03_zero_penalties.json": {
+            "_test": "All optional penalties omitted — score must equal base on completion",
+            "gameId": "test-zero-penalties",
+            "type": "grid",
+            "title": "No Penalty Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 300
+            },
+            "scoring": {
+                "base": 1000,
+                "timePenalty": 0
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": [
+                    [
+                        0,
+                        0,
+                        5
+                    ],
+                    [
+                        1,
+                        1,
+                        3
+                    ],
+                    [
+                        2,
+                        2,
+                        7
+                    ]
+                ]
+            }
+        },
+        "TEST_04_countup_timer.json": {
+            "_test": "Countup mode — timer must count up, timeElapsed must be recorded correctly",
+            "gameId": "test-countup",
+            "type": "word",
+            "title": "Countup Timer Test",
+            "timer": {
+                "mode": "countup",
+                "seconds": 999
+            },
+            "scoring": {
+                "base": 300,
+                "timePenalty": 1
+            },
+            "config": {
+                "letters": [
+                    "A",
+                    "B",
+                    "C"
+                ],
+                "minLength": 2,
+                "targetWords": [
+                    "CAB",
+                    "BAC"
+                ]
+            }
+        },
+        "TEST_05_single_word.json": {
+            "_test": "Word game with one target word — winCondition must trigger on that word",
+            "gameId": "test-single-word",
+            "type": "word",
+            "title": "Single Word Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 60
+            },
+            "scoring": {
+                "base": 100,
+                "timePenalty": 0
+            },
+            "config": {
+                "letters": [
+                    "C",
+                    "A",
+                    "T"
+                ],
+                "minLength": 3,
+                "targetWords": [
+                    "CAT"
+                ]
+            }
+        },
+        "TEST_06_high_base_score.json": {
+            "_test": "Large base score — score must not overflow or format incorrectly",
+            "gameId": "test-high-score",
+            "type": "grid",
+            "title": "High Score Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 300
+            },
+            "scoring": {
+                "base": 99999,
+                "timePenalty": 0,
+                "errorPenalty": 0
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": [
+                    [
+                        0,
+                        0,
+                        5
+                    ],
+                    [
+                        0,
+                        1,
+                        3
+                    ]
+                ]
+            }
+        },
+        "TEST_07_all_cells_prefilled_except_one.json": {
+            "_test": "One empty cell — winCondition must trigger after exactly one correct placement",
+            "gameId": "test-one-cell",
+            "type": "grid",
+            "title": "One Cell Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 60
+            },
+            "scoring": {
+                "base": 1000,
+                "timePenalty": 1
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": [
+                    [
+                        0,
+                        0,
+                        5
+                    ],
+                    [
+                        0,
+                        1,
+                        3
+                    ],
+                    [
+                        0,
+                        2,
+                        4
+                    ],
+                    [
+                        0,
+                        3,
+                        6
+                    ],
+                    [
+                        0,
+                        4,
+                        7
+                    ],
+                    [
+                        0,
+                        5,
+                        8
+                    ],
+                    [
+                        0,
+                        6,
+                        9
+                    ],
+                    [
+                        0,
+                        7,
+                        1
+                    ],
+                    [
+                        1,
+                        0,
+                        6
+                    ],
+                    [
+                        1,
+                        1,
+                        7
+                    ],
+                    [
+                        1,
+                        2,
+                        2
+                    ],
+                    [
+                        1,
+                        3,
+                        1
+                    ],
+                    [
+                        1,
+                        4,
+                        9
+                    ],
+                    [
+                        1,
+                        5,
+                        5
+                    ],
+                    [
+                        1,
+                        6,
+                        3
+                    ],
+                    [
+                        1,
+                        7,
+                        4
+                    ],
+                    [
+                        1,
+                        8,
+                        8
+                    ],
+                    [
+                        2,
+                        0,
+                        1
+                    ],
+                    [
+                        2,
+                        1,
+                        9
+                    ],
+                    [
+                        2,
+                        2,
+                        8
+                    ],
+                    [
+                        2,
+                        3,
+                        3
+                    ],
+                    [
+                        2,
+                        4,
+                        4
+                    ],
+                    [
+                        2,
+                        5,
+                        2
+                    ],
+                    [
+                        2,
+                        6,
+                        5
+                    ],
+                    [
+                        2,
+                        7,
+                        6
+                    ],
+                    [
+                        2,
+                        8,
+                        7
+                    ],
+                    [
+                        3,
+                        0,
+                        8
+                    ],
+                    [
+                        3,
+                        1,
+                        5
+                    ],
+                    [
+                        3,
+                        2,
+                        9
+                    ],
+                    [
+                        3,
+                        3,
+                        7
+                    ],
+                    [
+                        3,
+                        4,
+                        6
+                    ],
+                    [
+                        3,
+                        5,
+                        1
+                    ],
+                    [
+                        3,
+                        6,
+                        4
+                    ],
+                    [
+                        3,
+                        7,
+                        2
+                    ],
+                    [
+                        3,
+                        8,
+                        3
+                    ],
+                    [
+                        4,
+                        0,
+                        4
+                    ],
+                    [
+                        4,
+                        1,
+                        2
+                    ],
+                    [
+                        4,
+                        2,
+                        6
+                    ],
+                    [
+                        4,
+                        3,
+                        8
+                    ],
+                    [
+                        4,
+                        4,
+                        5
+                    ],
+                    [
+                        4,
+                        5,
+                        3
+                    ],
+                    [
+                        4,
+                        6,
+                        7
+                    ],
+                    [
+                        4,
+                        7,
+                        9
+                    ],
+                    [
+                        4,
+                        8,
+                        1
+                    ],
+                    [
+                        5,
+                        0,
+                        7
+                    ],
+                    [
+                        5,
+                        1,
+                        1
+                    ],
+                    [
+                        5,
+                        2,
+                        3
+                    ],
+                    [
+                        5,
+                        3,
+                        9
+                    ],
+                    [
+                        5,
+                        4,
+                        2
+                    ],
+                    [
+                        5,
+                        5,
+                        4
+                    ],
+                    [
+                        5,
+                        6,
+                        8
+                    ],
+                    [
+                        5,
+                        7,
+                        5
+                    ],
+                    [
+                        5,
+                        8,
+                        6
+                    ],
+                    [
+                        6,
+                        0,
+                        9
+                    ],
+                    [
+                        6,
+                        1,
+                        6
+                    ],
+                    [
+                        6,
+                        2,
+                        1
+                    ],
+                    [
+                        6,
+                        3,
+                        5
+                    ],
+                    [
+                        6,
+                        4,
+                        3
+                    ],
+                    [
+                        6,
+                        5,
+                        7
+                    ],
+                    [
+                        6,
+                        6,
+                        2
+                    ],
+                    [
+                        6,
+                        7,
+                        8
+                    ],
+                    [
+                        6,
+                        8,
+                        4
+                    ],
+                    [
+                        7,
+                        0,
+                        2
+                    ],
+                    [
+                        7,
+                        1,
+                        8
+                    ],
+                    [
+                        7,
+                        2,
+                        7
+                    ],
+                    [
+                        7,
+                        3,
+                        4
+                    ],
+                    [
+                        7,
+                        4,
+                        1
+                    ],
+                    [
+                        7,
+                        5,
+                        9
+                    ],
+                    [
+                        7,
+                        6,
+                        6
+                    ],
+                    [
+                        7,
+                        7,
+                        3
+                    ],
+                    [
+                        7,
+                        8,
+                        5
+                    ],
+                    [
+                        8,
+                        0,
+                        3
+                    ],
+                    [
+                        8,
+                        1,
+                        4
+                    ],
+                    [
+                        8,
+                        2,
+                        5
+                    ],
+                    [
+                        8,
+                        3,
+                        2
+                    ],
+                    [
+                        8,
+                        4,
+                        8
+                    ],
+                    [
+                        8,
+                        5,
+                        6
+                    ],
+                    [
+                        8,
+                        6,
+                        1
+                    ],
+                    [
+                        8,
+                        7,
+                        7
+                    ]
+                ]
+            }
+        }
+    },
+    "VALIDATION_FAILURE_TESTS": {
+        "_info": "These configs are intentionally broken. GameLoader must throw on each one.",
+        "FAIL_01_missing_gameId": {
+            "type": "grid",
+            "title": "Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 60
+            },
+            "scoring": {
+                "base": 100,
+                "timePenalty": 1
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": []
+            }
+        },
+        "FAIL_02_missing_type": {
+            "gameId": "test",
+            "title": "Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 60
+            },
+            "scoring": {
+                "base": 100,
+                "timePenalty": 1
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": []
+            }
+        },
+        "FAIL_03_unknown_type": {
+            "gameId": "test",
+            "type": "unknown_type_xyz",
+            "title": "Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 60
+            },
+            "scoring": {
+                "base": 100,
+                "timePenalty": 1
+            },
+            "config": {}
+        },
+        "FAIL_04_missing_timer": {
+            "gameId": "test",
+            "type": "grid",
+            "title": "Test",
+            "scoring": {
+                "base": 100,
+                "timePenalty": 1
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": []
+            }
+        },
+        "FAIL_05_missing_scoring": {
+            "gameId": "test",
+            "type": "grid",
+            "title": "Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 60
+            },
+            "config": {
+                "gridSize": 9,
+                "prefilled": []
+            }
+        },
+        "FAIL_06_missing_config": {
+            "gameId": "test",
+            "type": "grid",
+            "title": "Test",
+            "timer": {
+                "mode": "countdown",
+                "seconds": 60
+            },
+            "scoring": {
+                "base": 100,
+                "timePenalty": 1
+            }
+        }
+    },
+    "SCORE_CALCULATION_TESTS": {
+        "_info": "Use these to manually verify ScoreCalculator output",
+        "case_1": {
+            "_description": "Perfect run — no errors, no hints, fast time",
+            "config_scoring": {
+                "base": 1000,
+                "timePenalty": 2,
+                "errorPenalty": 50,
+                "hintPenalty": 100
+            },
+            "timeElapsed": 60,
+            "errors": 0,
+            "hints": 0,
+            "_expected_score": 880
+        },
+        "case_2": {
+            "_description": "Average run — 1 error, 1 hint, medium time",
+            "config_scoring": {
+                "base": 1000,
+                "timePenalty": 2,
+                "errorPenalty": 50,
+                "hintPenalty": 100
+            },
+            "timeElapsed": 130,
+            "errors": 1,
+            "hints": 1,
+            "_expected_score": 590
+        },
+        "case_3": {
+            "_description": "Bad run — score must floor at 0, never go negative",
+            "config_scoring": {
+                "base": 100,
+                "timePenalty": 5,
+                "errorPenalty": 100,
+                "hintPenalty": 100
+            },
+            "timeElapsed": 300,
+            "errors": 5,
+            "hints": 2,
+            "_expected_score": 0
+        },
+        "case_4": {
+            "_description": "No penalties — score must exactly equal base",
+            "config_scoring": {
+                "base": 500,
+                "timePenalty": 0,
+                "errorPenalty": 0,
+                "hintPenalty": 0
+            },
+            "timeElapsed": 999,
+            "errors": 99,
+            "hints": 99,
+            "_expected_score": 500
+        }
+    }
+}

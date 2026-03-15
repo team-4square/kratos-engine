@@ -1,4 +1,3 @@
-// engine/GameLoader.ts
 import { JSONConfig } from "@/lib/types"
 
 export async function loadConfig(gameId: string): Promise<JSONConfig> {

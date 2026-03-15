@@ -1,4 +1,3 @@
-// games/wordbuilder/wordbuilder.logic.ts
 import { GameDefinition, JSONConfig, GameState, Action } from "@/lib/types"
 
 export const wordBuilderLogic: GameDefinition = {

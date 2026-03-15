@@ -1,4 +1,3 @@
-// stores/leaderboardStore.ts
 "use client"
 import { create } from "zustand"
 

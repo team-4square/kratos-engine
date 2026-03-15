@@ -1,13 +1,11 @@
-// games/sudoku/Sudoku.tsx
 "use client"
 import { useState }        from "react"
 import { useGameStore }    from "@/stores/gameStore"
 import { useSessionStore } from "@/stores/sessionStore"
 
 export default function Sudoku({ prefilled }: { prefilled: number[][] }) {
-  const state    = useGameStore(s => s.state)
-  const dispatch = useGameStore(s => s.dispatch)
-  const status   = useSessionStore(s => s.status)
+  const { state, dispatch }     = useGameStore()
+  const { status }              = useSessionStore()
   const [selected, setSelected] = useState<[number,number] | null>(null)
   const [activeNum, setActiveNum] = useState<number | null>(null)
 

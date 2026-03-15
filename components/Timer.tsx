@@ -1,4 +1,3 @@
-// components/Timer.tsx
 "use client"
 import { useSessionStore } from "@/stores/sessionStore"
 
