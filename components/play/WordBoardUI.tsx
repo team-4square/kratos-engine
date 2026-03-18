@@ -9,7 +9,7 @@ export default function WordBoardUI() {
   const { status }          = useSessionStore()
 
   if (!state) return null
-  const board       = state.board as any
+  const board = state.board as { available: string[]; current: string[]; found: string[]; targetWords: string[] }
   const currentWord = board.current.join("")
 
   return (
@@ -29,7 +29,7 @@ export default function WordBoardUI() {
         </div>
       </div>
 
-      <div className="min-h-[56px] rounded-xl bg-white border border-gray-200 px-5
+      <div className="min-h-14 rounded-xl bg-white border border-gray-200 px-5
         flex items-center justify-between shadow-sm group">
         <span className="text-2xl font-bold tracking-widest text-indigo-700">
           {currentWord || <span className="text-gray-200 text-base font-normal lowercase tracking-normal italic">select letters...</span>}
@@ -43,7 +43,7 @@ export default function WordBoardUI() {
       <div className="flex gap-3">
         <button onClick={() => dispatch({ type: "SUBMIT_WORD" })}
           disabled={currentWord.length < state.meta.minLength || status !== "playing"}
-          className="flex-[2] py-3 rounded-xl bg-indigo-600 text-white text-sm font-semibold
+          className="flex-2 py-3 rounded-xl bg-indigo-600 text-white text-sm font-semibold
             hover:bg-indigo-700 disabled:opacity-40 transition-all shadow-md active:scale-[0.98]">
           Submit word
         </button>

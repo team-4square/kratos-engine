@@ -10,7 +10,7 @@ export default function Footer() {
           <p className="mt-1">Built with React, Zustand, Firebase, Next.js</p>
         </div>
         <div className="text-right">
-          <p className="font-medium text-gray-500 mb-1">Kratos Hackathon 2026</p>
+          <p className="font-medium text-gray-500 mb-1">taptap Hackathon 2026</p>
           <p>League 1 · Engine League</p>
           <p className="mt-1">Deadline: March 31, 2026</p>
         </div>
